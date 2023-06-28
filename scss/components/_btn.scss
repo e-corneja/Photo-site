@@ -1,0 +1,33 @@
+.btn {
+  display: inline-flex;
+  font-weight: 700;
+  font-size: var(--main-size);
+  display: flex;
+  align-items: center;
+  color: var(--light-color);
+  padding: 15.5px 22px;
+  background-color: var(--accent-color);
+  transition: all 0.3s ease-in-out;
+
+  @include mobile {
+    padding: 12px 22px;
+    font-size: 14px;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  @include hover {
+    background-color: var(--hoverBtn-color);
+  }
+
+  &:active {
+    background-color: var(--active-color);
+  }
+}
+
+.btn.focus-visible {
+  background-color: var(--accent-color);
+  box-shadow: 0 0 0 3px var(--active-color);
+}

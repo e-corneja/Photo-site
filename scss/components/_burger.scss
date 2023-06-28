@@ -1,0 +1,55 @@
+.burger {
+  width: 20px;
+  height: 18px;
+  position: relative;
+  display: none;
+
+  &__line {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 2px;
+    width: 20px;
+    background-color: #fff;
+    transform: translateX(-50%) translateY(-50%);
+
+    &:first-child {
+      margin-top: -8px;
+    }
+
+    &:last-child {
+      left: 0;
+      width: 10px;
+      margin-top: 8px;
+      transform: translateY(-50%);
+    }
+  }
+
+  @include mobile {
+    display: inline-block;
+  }
+}
+
+.wrapper-burger {
+  order: 3;
+  width: 100%;
+  display: none;
+
+  @include mobile {
+    display: inline-block;
+  }
+}
+
+.burger-close {
+  display: none;
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: 2%;
+  left: 5%;
+  background-image: url("../../img/svg/closeBtn-icon.svg");
+
+  @include mobile {
+    display: block;
+  }
+}

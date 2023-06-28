@@ -1,0 +1,23 @@
+// если вы хотите использовать sass-переменные - удалите root
+// colors
+:root {
+  // base
+  --font-family: "Roboto", sans-serif;
+  --second-family: "TTFirsNeue", sans-serif;
+  --content-width: 1290px;
+  --container-offset: 31px;
+  --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
+  --offset: 30px;
+
+  //sizes
+  --main-size: 16px;
+  --second-size: 24px;
+
+  // colors
+  --light-color: #fff;
+  --dark-color: #202020;
+  --accent-color: #ff6e30;
+  --active-color: #ce4307;
+  --hoverBtn-color: #bc572b;
+  --activeBtn-color: #ce4307;
+}
