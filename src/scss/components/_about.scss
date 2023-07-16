@@ -1,0 +1,158 @@
+.about {
+  background-color: var(--dark-color);
+
+  &__content {
+    padding-top: 31px;
+    padding-bottom: 69px;
+    gap: var(--offset);
+
+    @include tablet {
+      padding-top: 32px;
+      padding-bottom: 80px;
+    }
+
+    @include small-tablet {
+      padding-top: 32px;
+      padding-bottom: 62px;
+    }
+
+    @include mobile {
+      display: block;
+      padding-top: 33px;
+      padding-bottom: 59px;
+    }
+  }
+
+  .left-container {
+    flex-basis: 50%;
+  }
+
+  .right-container {
+    flex-basis: 50%;
+    padding-top: 31px;
+
+    @include mobile {
+      padding-top: 21px;
+    }
+  }
+
+  &__title {
+    color: var(--light-color);
+    margin-bottom: 7px;
+
+    @include mobile {
+      font-size: 18px;
+    }
+  }
+
+  &__text {
+    margin: 0;
+    color: var(--light-color);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 28px;
+
+    @include mobile {
+      font-size: 14px;
+      line-height: 25px;
+      min-width: 278px;
+    }
+  }
+
+  &__img {
+    display: block;
+    margin-bottom: 18px;
+
+    @include small-tablet {
+      margin-bottom: 13px;
+    }
+
+    @include mobile {
+      margin-bottom: 24px;
+    }
+  }
+
+  &__subtitle {
+    color: var(--light-color);
+    margin-bottom: 13px;
+
+    @include mobile {
+      font-size: 18px;
+    }
+  }
+
+  &__form {
+    justify-content: space-between;
+    gap: 30px;
+
+    @include tablet {
+      flex-direction: column;
+      gap: 20px;
+    }
+  }
+
+  &__label {
+    display: flex;
+    flex-direction: column-reverse;
+    width: 75.3%;
+
+    @include tablet {
+      width: 73.3%;
+    }
+
+    @include small-tablet {
+      width: 100%;
+    }
+  }
+
+  .just-validate-error-label {
+    width: fit-content;
+    font-size: 9px !important;
+    color: #f06666 !important;
+    transform: translate(23px, 17px) !important;
+  }
+
+  &__input {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 16px 23px;
+    border: none;
+    background-color: #4a4a4a;
+    outline: none;
+    transition: all 0.3s ease-in-out;
+
+    &::placeholder {
+      color: #cacaca;
+      font-weight: 400;
+      font-size: 16px;
+      transition: all 0.3s ease-in-out;
+    }
+
+    @include mobile {
+      padding: 12px 23px;
+    }
+  }
+
+  &__input.focus-visible {
+    border: none;
+    outline: 1px solid #ff6e30;
+  }
+
+  &__input:hover::placeholder {
+    cursor: pointer;
+    color: var(--accent-color);
+  }
+
+  input:not([type="range"]):not([type="color"]) {
+    color: var(--light-color);
+  }
+
+  .error-message {
+    display: none;
+    color: red;
+  }
+
+  &__btn {
+    display: inline-block;
+  }
+}
